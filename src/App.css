@@ -1,3 +1,7 @@
-body {
+.listItemFalse {
+  text-decoration: none;
+}
 
+.listItemTrue {
+  text-decoration: line-through;
 }

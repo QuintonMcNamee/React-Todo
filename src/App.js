@@ -49,6 +49,22 @@ class App extends React.Component {
     }
   }
 
+  toggleTask = id => {
+    console.log(id);
+    this.setState({
+      tasks: this.state.tasks.map(item => {
+        if (item.id === id) {
+          return {
+            ...item,
+            completed: !item.completed
+          };
+        } else {
+          return item;
+        }
+      })
+    });
+  };
+
   addTask = taskName => {
     const newTask = {
       task: taskName,
@@ -66,17 +82,12 @@ class App extends React.Component {
     });
   };
 
-  lineThroughFunc = () => {
-    alert('hi');
-    this.className = 'completedStyle';
-  }
-
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
         <div>
-          <TodoList tasks={this.state.tasks} lineThroughFunc={this.lineThroughFunc}/>
+          <TodoList tasks={this.state.tasks} toggleTask={this.toggleTask} />
           <TodoForm addTask={this.addTask} clearCompleted={this.clearCompleted} />
         </div>
       </div>

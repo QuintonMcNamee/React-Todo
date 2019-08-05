@@ -9,8 +9,8 @@ const TodoList = props => {
   return (
     <div className="todo-list">
       {props.tasks.map(item => (
-        <div className="listItemFlex">
-        <Todo key={item.id} task={item.task} toggleTask={props.toggleTask} lineThroughFunc={props.lineThroughFunc} />
+        <div>
+        <Todo key={item.id} item={item} toggleTask={props.toggleTask} />
         </div>
       ))}
     </div>
