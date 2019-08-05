@@ -7,32 +7,32 @@ import TodoForm from './components/TodoComponents/TodoForm';
 const tasksData = [
   {
     task: "Make coffee",
-    id: Date.now(),
+    id: 1,
     completed: false
   },
   {
     task: "Study training kit",
-    id: Date.now(),
+    id: 2,
     completed: false
   },
   {
     task: "Listen to lecture",
-    id: Date.now(),
+    id: 3,
     completed: false
   },
   {
     task: "Go for walk",
-    id: Date.now(),
+    id: 4,
     completed: false
   },
   {
     task: "Shower",
-    id: Date.now(),
+    id: 5,
     completed: false
   },
   {
     task: "Do project",
-    id: Date.now(),
+    id: 6,
     completed: false
   }
 ];
