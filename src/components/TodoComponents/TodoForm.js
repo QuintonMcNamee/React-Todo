@@ -1,5 +1,9 @@
 import React from "react";
 
+const inlineBlockStyle = {
+  display: 'inline-block'
+};
+
 class TodoForm extends React.Component {
   constructor() {
     super();
@@ -17,6 +21,9 @@ class TodoForm extends React.Component {
   submitItem = e => {
     e.preventDefault();
     this.props.addTask(this.state.item);
+    this.setState({
+      item: ''
+    })
   }
 
   clearTask = e => {
@@ -27,7 +34,7 @@ class TodoForm extends React.Component {
   render() {
     return (
       <>
-        <form onSubmit={this.submitItem}>
+        <form style={inlineBlockStyle} onSubmit={this.submitItem}>
           <input
             type="text"
             value={this.state.item}
